@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul>
+          <li onclick="openNav()" class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+          <li class="header-icons">Home</li>
+          <li class="header-icons">Contact</li>
+          <li class="header-icons">About</li>
+          <li class="header-icons">Projects</li>
+        </ul>
+      </div>
+      <div class="sideNav" id="sideNavBar">
+        <button class="close-btn" onclick="closeNav()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+          <li>Projects</li>
+        </ul>
+      </div>
+      <form autocomplete="off">
+        <div class="card-container">
+          <div class="element-group">
+            <div class="column">
+              <input
+                type="text"
+                placeholder="First Name"
+                autocomplete="new-name"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Last Name"
+                autocomplete="new-name"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Email Address"
+                autocomplete="new-email"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Contact Number"
+                autocomplete="new-number"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+          </div>
+
+          <div class="element-group">
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Password"
+                autocomplete="new-password"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Confirm Password"
+                autocomplete="new-password"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column-dob">
+              <input
+                type="text"
+                placeholder="DOB"
+                autocomplete="new-date"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+              <i class="fa-solid fa-calendar-days" id="calendar"></i>
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Gender"
+                autocomplete="gender"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+          </div>
+
+          <div class="element-group">
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Aadhar Number"
+                autocomplete="new-aadhar"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="City"
+                autocomplete="new-city"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="State"
+                autocomplete="new-state"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Country"
+                autocomplete="new-country"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+          </div>
+
+          <div class="element-group">
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Known Languages"
+                autocomplete="new-languages"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Address"
+                autocomplete="new-address"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Known Languages"
+                autocomplete="new-languages"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+            <div class="column">
+              <input
+                type="text"
+                placeholder="Address"
+                autocomplete="new-address"
+                onfocus="onFocusFunction(this)"
+                onfocusout="myFunction(this)"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="submit-btn">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+    <script>
+      function onFocusFunction(x) {
+        x.style.background = "#36454F";
+      }
+
+      function myFunction(x) {
+        x.style.background = "gray";
+      }
+
+      function openNav() {
+        document.getElementById("sideNavBar").style.width = "100%";
+        document.getElementById("sideNavBar").style.height = "100%";
+        document.getElementById("sideNavBar").style.backgroundColor = "pink";
+      }
+
+      function closeNav() {
+        document.getElementById("sideNavBar").style.width = "0";
+        document.getElementById("sideNavBar").style.height = "0";
+      }
+    </script>
+  </body>
+</html>

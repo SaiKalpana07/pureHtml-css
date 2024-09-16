@@ -1,0 +1,296 @@
+*{
+    margin:0;
+    padding:0;
+    color: white;
+}
+
+.container {
+    width:100%;
+    background-color: plum;
+    float:left;
+}
+
+.header {
+    background-color: palevioletred;
+    float:left;
+    width:100%;
+}
+
+ul {
+    float: left;
+}
+
+.header li {
+    list-style: none;
+    padding:15px;
+    float: left;
+}
+
+.card-container {
+    display:block;
+    margin: 0 auto;
+    width: 100%;
+    float: left;
+}
+
+.element-group {
+    width:100%;
+    float: left;
+}
+
+.column {
+    width:25%;
+    float: left;
+}
+
+.column-dob {
+    width: 25%;
+    position: relative;
+    float: left;
+}
+
+ .column-dob .fa-solid {     
+    position: absolute;
+    top: 50%;
+    transform: translateY(-15%);
+    color:white;
+    margin-right: 1rem;
+}
+
+input[type="text"] {
+    margin-left:2rem;
+    margin-top:1rem;
+    width:80%;
+    background-color: palevioletred;
+    border-radius: 15px;
+    color:white;
+    padding:10px 5px;
+}
+
+::placeholder {
+    color:white;
+    padding:5px;
+}
+
+input {
+    color:gray;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    float: left;   
+}
+
+input[type="submit"] {
+    background-color: palevioletred;
+    border: none;
+    color: white;
+    padding: 10px 56px;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    margin: 0 auto;
+}
+
+.sideNav {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sideNav li {
+    width: 100%;
+    margin-left: 2rem;
+    list-style: none;
+    padding: 15px 14px;
+    margin-top:2rem;
+}
+
+.close-btn {
+    border:none;
+    background-color: pink;
+    padding-top:1rem;
+    position: absolute;
+    right:5%;
+}
+
+@media(min-width:1800px) and (max-width:2560px) {
+    .column-dob .fa-solid {
+        right: 92px;       
+    }
+
+    .sideNav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+@media(min-width:1441px) and (max-width:1799px) {
+    .column-dob .fa-solid {
+        right: 25px;       
+    }
+
+    .sideNav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+@media(min-width:1201px) and (max-width:1440px) {
+    .column-dob .fa-solid {
+        right: 25px;       
+    }
+
+    .sideNav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+@media(min-width:993px) and (max-width:1200px) {
+    .column-dob .fa-solid {
+        right: 25px;
+    }
+
+    .sideNav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+@media(min-width:768px) and (max-width:992px) {
+    .card-container {
+        width: 50%;
+    }
+
+    .element-group {
+        margin-left: -0.67rem;
+    }
+
+    .column,.column-dob {
+        width:50%;
+    }
+
+    .column-dob .fa-solid { 
+        top: 53%;
+        color: white;
+        margin-right: 1rem;
+        left: 193px;
+    }
+
+    .submit-btn {
+        margin-top:1.5rem;
+    }  
+
+    .sideNav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+@media(min-width:480px) and (max-width:767px) {
+
+    .card-container {
+        text-align: center;
+    }
+
+    .element-group {
+        display: inline;
+    }
+
+    .column,.column-dob {
+        width:100%;
+        margin:0px -13px;     
+    }
+
+    .column-dob .fa-solid { 
+        position: absolute;
+        top: 53%;
+        transform: translateY(-15%);
+        color: white;
+        right:3rem;
+    }
+
+    .header-icons {
+       display: none;
+    }
+
+    .submit-btn {
+        margin-top:0.75rem;
+    }
+
+}
+
+@media(min-width:241px) and (max-width:480px) {
+    .element-group {
+        display: inline;
+    }
+
+    .column,.column-dob {
+        width:100%;
+    }
+
+    .column-dob .fa-solid { 
+        top: 52%;
+        left: 205px;
+    }
+
+    .header-icons {
+        display: none;
+     }
+
+    .submit-btn {
+        margin-top:1.5rem;
+    }
+}
+
+@media(max-width:240px) {
+    .container {
+        width:100%;
+        background-color: black;
+    }
+
+    .card-container {
+        margin-top: 0rem;
+    }
+
+    .element-group {
+        display: inline;
+    }
+
+    .column,.column-dob {
+        width:100%;
+        margin:-7px;
+    }
+
+    .column-dob .fa-solid { 
+        top: 51%;
+        left: 81px;
+    }
+
+    .header-icons {
+        display: none;
+     }
+
+    .submit-btn {
+        margin-top:1rem;
+    }
+}
