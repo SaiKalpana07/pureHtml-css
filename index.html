@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>User registration</title>
+    <link rel="icon" type="image/x-icon" href="programmer.png" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -16,33 +15,53 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <ul>
-          <li onclick="openNav()" class="hamburger-menu">
-            <i class="fa-solid fa-bars"></i>
-          </li>
-          <li class="header-icons">Home</li>
-          <li class="header-icons">Contact</li>
-          <li class="header-icons">About</li>
-          <li class="header-icons">Projects</li>
+      <div class="header" id="header-list">
+        <div class="hamburger-menu">
+          <i class="fa-solid fa-bars" id="menu-icon" onclick="openNav()"></i>
+          <i class="fa-solid fa-xmark" id="close-btn" onclick="closeNav()"></i>
+        </div>
+
+        <ul id="nav-menu">
+          <li class="header-icons" id="home-icon">Home</li>
+          <li class="header-icons" id="contact">Contact</li>
+          <li class="header-icons" id="about">About</li>
+          <li class="header-icons" id="project">Projects</li>
         </ul>
       </div>
-      <div class="sideNav" id="sideNavBar">
+
+      <!-- <div class="sideNav" id="sideNavBar">
         <button class="close-btn" onclick="closeNav()">
           <i class="fa-solid fa-xmark"></i>
         </button>
         <ul>
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Projects</li>
+          <li>
+            <i class="fa-solid fa-house"></i
+            ><span style="padding-left: 20px"></span>Home
+          </li>
+          <hr class="solid" />
+          <li>
+            <i class="fa-solid fa-address-book"></i
+            ><span style="padding-left: 20px"></span>Contact
+          </li>
+          <hr class="solid" />
+          <li>
+            <i class="fa-solid fa-address-card"></i
+            ><span style="padding-left: 20px"></span>About
+          </li>
+          <hr class="solid" />
+          <li>
+            <i class="fa-solid fa-user"></i
+            ><span style="padding-left: 20px"></span>Profile
+          </li>
+          <hr class="solid" />
         </ul>
-      </div>
+      </div> -->
       <form autocomplete="off">
         <div class="card-container">
           <div class="element-group">
             <div class="column">
               <input
+                class="input-field"
                 type="text"
                 placeholder="First Name"
                 autocomplete="new-name"
@@ -196,11 +215,50 @@
               />
             </div>
           </div>
-        </div>
-        <div class="submit-btn">
-          <input type="submit" />
+          <div class="element-group" id="submit-btn">
+            <input type="submit" />
+          </div>
         </div>
       </form>
+      <div class="table-container">
+        <div class="caption">
+          <h4>User Information</h4>
+        </div>
+        <div class="table-colgroup">
+          <div class="table-col col-1">Col1</div>
+          <div class="table-col col-2">Col2</div>
+          <div class="table-col col-3">Col3</div>
+        </div>
+        <div class="table-header">
+          <div class="col">Emp Id</div>
+          <div class="col">Emp name</div>
+          <div class="col">Age</div>
+        </div>
+        <div class="row-group">
+          <div class="row">
+            <div class="col">1</div>
+            <div class="col">John</div>
+            <div class="col">26</div>
+          </div>
+          <div class="row">
+            <div class="col">2</div>
+            <div class="col">Jacob</div>
+            <div class="col">20</div>
+          </div>
+          <div class="row">
+            <div class="col">3</div>
+            <div class="col">Jane</div>
+            <div class="col">20</div>
+          </div>
+        </div>
+        <div class="table-footer">
+          <div class="col">Total employees</div>
+          <div class="col">3</div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Footer content</p>
+      </div>
     </div>
     <script>
       function onFocusFunction(x) {
@@ -212,14 +270,15 @@
       }
 
       function openNav() {
-        document.getElementById("sideNavBar").style.width = "100%";
-        document.getElementById("sideNavBar").style.height = "100%";
-        document.getElementById("sideNavBar").style.backgroundColor = "pink";
+        // alert("m1");
+        document.getElementById("nav-menu").style.display = "block";
+        document.getElementById("close-btn").style.display = "block";
       }
 
       function closeNav() {
-        document.getElementById("sideNavBar").style.width = "0";
-        document.getElementById("sideNavBar").style.height = "0";
+        // alert("m2");
+        document.getElementById("nav-menu").style.display = "none";
+        document.getElementById("close-btn").style.display = "none";
       }
     </script>
   </body>
