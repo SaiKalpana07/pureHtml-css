@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="windowResizing.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+  </head>
+  <body>
+    <div class="header" id="header-list">
+      <div class="hamburger-menu">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+      </div>
+      <div class="nav" id="nav-menu">
+        <ul id="unordered-list">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Project</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      window.onresize = () => {
+        var width = window.innerWidth;
+        if (width < 600) {
+          document.getElementById("menu-icon").style.display = "block";
+          document.getElementById("nav-menu").style.display = "none";
+        }
+        if (width > 600) {
+          document.getElementById("menu-icon").style.display = "none";
+          document.getElementById("close-btn").style.display = "none";
+          document.getElementById("nav-menu").style.display = "inline";
+        }
+
+        document
+          .getElementById("menu-icon")
+          .addEventListener("click", openNav, false);
+        function openNav() {
+          if (width < 600) {
+            document.getElementById("nav-menu").style.display = "block";
+            document.getElementById("close-btn").style.display = "block";
+          } else {
+            document.getElementById("nav-menu").style.display = "inline";
+            document.getElementById("close-btn").style.display = "none";
+          }
+        }
+
+        document
+          .getElementById("close-btn")
+          .addEventListener("click", closeNav, false);
+        function closeNav() {
+          if (width < 600) {
+            document.getElementById("nav-menu").style.display = "none";
+            document.getElementById("close-btn").style.display = "none";
+          } else {
+            document.getElementById("nav-menu").style.display = "inline";
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

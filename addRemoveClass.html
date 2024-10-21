@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="addRemoveClass.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+  </head>
+  <body>
+    <div class="header" id="header-list">
+      <div class="hamburger-menu">
+        <i class="fa-solid fa-bars" id="menu-icon" onclick="openNav()"></i>
+        <i class="fa-solid fa-xmark" id="close-btn" onclick="closeNav()"></i>
+      </div>
+      <div class="nav" id="nav-menu">
+        <ul id="nav-list">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Project</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("close-btn").style.display = "block";
+        var element = document.getElementById("nav-list");
+        element.classList.add("list-li");
+      }
+
+      function closeNav() {
+        document.getElementById("close-btn").style.display = "none";
+        var element = document.getElementById("nav-list");
+        element.classList.remove("list-li");
+      }
+    </script>
+  </body>
+</html>

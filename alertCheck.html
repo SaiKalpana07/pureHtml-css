@@ -18,17 +18,19 @@
       <li>Career</li>
       <li>Contact</li>
     </ul>
-    <!-- <div>
-      <div class="grand-parent">
-        <button onclick="click1()">click1</button>
-        <div class="parent">
-          <button onclick="click2()">click2</button>
-        </div>
-        <div class="child">
-          <button onclick="click3()">click3</button>
-        </div>
+    <div
+      class="class1"
+      style="width: 100%; background-color: green; float: left; display: block"
+    >
+      <button>Class 1</button>
+      <div
+        class="class2"
+        style="width: 100%; background-color: blue; float: left; display: block"
+      >
+        <button onclick="handleClick()">Class 2</button>
       </div>
-    </div> -->
+    </div>
+
     <script>
       function click1() {
         alert("click1");
@@ -38,6 +40,10 @@
       }
       function click3() {
         alert("click3");
+      }
+
+      function handleClick() {
+        document.getElementsByClassName("class2").style.display = "none";
       }
     </script>
   </body>

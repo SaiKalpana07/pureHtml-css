@@ -20,42 +20,14 @@
           <i class="fa-solid fa-bars" id="menu-icon" onclick="openNav()"></i>
           <i class="fa-solid fa-xmark" id="close-btn" onclick="closeNav()"></i>
         </div>
-
         <ul id="nav-menu">
-          <li class="header-icons" id="home-icon">Home</li>
-          <li class="header-icons" id="contact">Contact</li>
-          <li class="header-icons" id="about">About</li>
-          <li class="header-icons" id="project">Projects</li>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+          <li>Projects</li>
         </ul>
       </div>
 
-      <!-- <div class="sideNav" id="sideNavBar">
-        <button class="close-btn" onclick="closeNav()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <ul>
-          <li>
-            <i class="fa-solid fa-house"></i
-            ><span style="padding-left: 20px"></span>Home
-          </li>
-          <hr class="solid" />
-          <li>
-            <i class="fa-solid fa-address-book"></i
-            ><span style="padding-left: 20px"></span>Contact
-          </li>
-          <hr class="solid" />
-          <li>
-            <i class="fa-solid fa-address-card"></i
-            ><span style="padding-left: 20px"></span>About
-          </li>
-          <hr class="solid" />
-          <li>
-            <i class="fa-solid fa-user"></i
-            ><span style="padding-left: 20px"></span>Profile
-          </li>
-          <hr class="solid" />
-        </ul>
-      </div> -->
       <form autocomplete="off">
         <div class="card-container">
           <div class="element-group">
@@ -270,14 +242,14 @@
       }
 
       function openNav() {
-        // alert("m1");
-        document.getElementById("nav-menu").style.display = "block";
+        var element = document.getElementById("nav-menu");
+        element.classList.add("menu-items");
         document.getElementById("close-btn").style.display = "block";
       }
 
       function closeNav() {
-        // alert("m2");
-        document.getElementById("nav-menu").style.display = "none";
+        var element = document.getElementById("nav-menu");
+        element.classList.remove("menu-items");
         document.getElementById("close-btn").style.display = "none";
       }
     </script>

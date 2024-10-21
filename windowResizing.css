@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  float: left;
+  background-color: palegoldenrod;
+  padding: 16px;
+}
+
+.hamburger-menu {
+  width: 100%;
+  float: left;
+}
+
+ul {
+  float: left;
+}
+
+.nav {
+  float: left;
+  width: 100%;
+  display: inline;
+}
+
+.header li {
+  width: 100%;
+  list-style: none;
+}
+
+li {
+  padding: 5px;
+}
+
+.nav {
+  margin-top: 16px;
+}
+
+#menu-icon {
+  display: none;
+}
+
+#close-btn {
+  display: none;
+  right: 5%;
+  top: 12%;
+  position: absolute;
+}
