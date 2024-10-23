@@ -28,11 +28,20 @@
         if (width < 600) {
           document.getElementById("menu-icon").style.display = "block";
           document.getElementById("nav-menu").style.display = "none";
+          var element = document.querySelectorAll(".header li");
+          element.forEach(function (li) {
+            li.style.display = "block";
+          });
         }
         if (width > 600) {
           document.getElementById("menu-icon").style.display = "none";
           document.getElementById("close-btn").style.display = "none";
           document.getElementById("nav-menu").style.display = "inline";
+          var element = document.querySelectorAll(".header li");
+          element.forEach(function (li) {
+            li.style.display = "inline";
+          });
+          // document.getElementById("l").style.display = "inline";
         }
 
         document
